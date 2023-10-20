@@ -29,7 +29,7 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
       - name: start docker container
-        run: docker run --name mvn-build -d ayushishu/robot-base-image bash -c "tail -f /dev/null "
+        run: docker run --name mvn-build -d ayushishu/odl-builder-images bash -c "tail -f /dev/null "
       - name: clone java code
         run: docker exec mvn-build git clone https://github.com/opendaylight/aaa.git
       - name: mvn build 
